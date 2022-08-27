@@ -1,10 +1,11 @@
-import React, { useState } from "react"
+import React from "react"
+import { useNavigate } from "react-router-dom"
 
 const Country = ({ data, filter }) => {
-  const [selected, setSelected] = useState(false)
+  const navigate = useNavigate()
 
   const handleClick = () => {
-    setSelected(!selected)
+    navigate(`/countries/${data.cca2}`)
   }
   const handleFilter = () => {
     if (!filter) return ""
@@ -18,7 +19,10 @@ const Country = ({ data, filter }) => {
   }
 
   return (
-    <div className={`flip-card card ${handleFilter()}`} onClick={handleClick}>
+    <article
+      className={`flip-card card ${handleFilter()}`}
+      onClick={handleClick}
+    >
       <div className="flip-card-inner">
         <div className="front">
           <div className="front-img">
@@ -47,7 +51,7 @@ const Country = ({ data, filter }) => {
           </p>
         </div>
       </div>
-    </div>
+    </article>
   )
 }
 

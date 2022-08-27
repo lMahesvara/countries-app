@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 
 const RegionFilter = ({ setFilter, filter }) => {
   const regions = ["Africa", "Americas", "Asia", "Europe", "Oceania"]
