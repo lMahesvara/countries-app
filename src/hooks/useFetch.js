@@ -27,6 +27,7 @@ export const useFetch = (url) => {
               return a.name.common.localeCompare(b.name.common)
             if (a.nativeName && b.nativeName)
               return a.nativeName.localeCompare(b.nativeName)
+            return true
           })
         }
         if (!signal.aborted) {
