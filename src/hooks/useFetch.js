@@ -20,9 +20,15 @@ export const useFetch = (url) => {
           throw err
         }
         const json = await res.json()
-        json.sort(function (a, b) {
-          return a.name.common.localeCompare(b.name.common)
-        })
+        //verify json is an array
+        if (Array.isArray(json)) {
+          json.sort(function (a, b) {
+            if (a.name?.common && b.name?.common)
+              return a.name.common.localeCompare(b.name.common)
+            if (a.nativeName && b.nativeName)
+              return a.nativeName.localeCompare(b.nativeName)
+          })
+        }
         if (!signal.aborted) {
           setData(json)
           setError(null)

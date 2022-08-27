@@ -34,6 +34,10 @@ header {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+.spacer-double {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
 
 .filter-content {
   display: flex;
@@ -177,4 +181,94 @@ header {
   visibility: hidden;
   opacity: 0;
   order: 1;
+}
+
+header a {
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  border: thin solid var(--main-color);
+  background-color: var(--main-color);
+  color: white;
+  padding: 0.6rem 2.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+}
+
+button:hover {
+  background-color: #282c34;
+  border: thin solid #ffffff;
+}
+
+.flex {
+  display: flex;
+  gap: 7rem;
+  align-items: center;
+}
+
+.country-flag {
+  max-width: 50%;
+  width: 50%;
+  height: 50%;
+}
+.country-flag img {
+  width: 80%;
+  height: 50%;
+  min-width: 200px;
+  max-height: 400px;
+}
+
+.country-info {
+  max-width: 50%;
+  width: 50%;
+  height: auto;
+}
+
+.country-info > * {
+  padding: 1rem;
+}
+
+.country-info .flex {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  align-items: flex-start;
+}
+
+.country-info > h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.borders-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.country-info .border {
+  border: thin solid var(--main-color);
+  background-color: var(--main-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.country-info .border:hover {
+  background-color: #282c34;
+  border: thin solid #ffffff;
+}
+
+.country-info .borders-container b {
+  font-size: 1.2rem;
+  font-weight: bold;
 }

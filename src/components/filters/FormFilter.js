@@ -4,10 +4,10 @@ import Search from "./Search"
 
 const FormFilter = ({ filter, setFilter }) => {
   return (
-    <div className="container spacer filter-content">
+    <section className="container spacer filter-content">
       <Search setFilter={setFilter} filter={filter} />
       <RegionFilter setFilter={setFilter} filter={filter} />
-    </div>
+    </section>
   )
 }
 
