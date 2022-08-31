@@ -1,6 +1,7 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
 import { useFetch } from "../../hooks/useFetch"
+import { MdKeyboardBackspace } from "react-icons/md"
 
 const URL = "https://restcountries.com/v2/alpha?codes="
 const FILTERS = "&fields=nativeName,alpha2Code"
@@ -16,12 +17,14 @@ const CountryFullInfo = ({ country, extraData }) => {
 
   return (
     <div>
-      <section className="container spacer-double">
+      <section className="flex container spacer-double">
         <button
+          className="btn-back"
           onClick={() => {
             navigate("/")
           }}
         >
+          <MdKeyboardBackspace className="arrow" />
           Back
         </button>
       </section>

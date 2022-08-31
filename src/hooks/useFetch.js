@@ -20,7 +20,6 @@ export const useFetch = (url) => {
           throw err
         }
         const json = await res.json()
-        //verify json is an array
         if (Array.isArray(json)) {
           json.sort(function (a, b) {
             if (a.name?.common && b.name?.common)
